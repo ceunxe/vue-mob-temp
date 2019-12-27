@@ -2,7 +2,7 @@
   <div id="app">
     <div class="view-page">
       <transition :name="viewTransition">
-        <keep-alive :include="getCache" :max="9">
+        <keep-alive :include="$store.state.cache" :max="9">
           <router-view :key="$route.fullPath" />
         </keep-alive>
       </transition>
@@ -19,7 +19,14 @@ export default {
   },
   watch: {
     $route: {
-      handler: function(to, from) {
+      handler: function (to, from) {
+        // 动态缓存页面
+        const name = to.matched[0].components.default.name || "";
+        if (name && name.indexOf("Keep") > -1) {
+          const arr = JSON.parse(JSON.stringify(this.$store.state.cache));
+          arr.includes(name) ? "" : this.$store.state.cache.push(name);
+        }
+        // 路由切换动画
         if (to.meta.isRoot && from.meta.isRoot) {
           if (to.meta.sort > from.meta.sort) {
             this.viewTransition = "app-in";
