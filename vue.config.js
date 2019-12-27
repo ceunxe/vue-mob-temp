@@ -20,6 +20,8 @@ module.exports = {
     config.resolve.alias
       .set('@page', resolve('src/views'))
       .set('@util', resolve('src/utils'))
+      .set('@ass', resolve('src/assets'))
+      .set('@com', resolve('src/components'))
       .set('@api', resolve('src/api'))
       .set('@img', resolve('src/assets/images'))
   },
@@ -28,7 +30,7 @@ module.exports = {
     loaderOptions: {
       // 给 sass-loader 传递选项
       sass: {
-        prependData: `@import "~@/assets/styles/global.scss";`
+        prependData: `@import "~@/assets/styles/variable.scss";`
       },
     }
   },

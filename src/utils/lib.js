@@ -12,3 +12,12 @@ export function getToken() {
   const token = JSON.parse(localStorage.getItem("nToken")) || "";
   return token.token;
 }
+
+// json转formdata
+export function changeForm(val) {
+  const formData = new FormData();
+  Object.keys(val).forEach(key => {
+    formData.append(key, val[key]);
+  });
+  return formData;
+}

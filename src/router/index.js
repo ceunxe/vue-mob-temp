@@ -3,9 +3,16 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
+// ===>拓展
+import navT from "@com/navT/NavT";
+import navB from "@com/navB/NavB";
+Vue.component("navT", navT);
+Vue.component("navB", navB);
+
 const routes = [
+  { path: '*',  redirect:'/home'},
   {
-    path: '/',
+    path: '/home',
     name: 'home',
     component: () => import('@page/Home.vue')
   }

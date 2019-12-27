@@ -1,6 +1,7 @@
 <template>
   <div class="home-page">
-    <div>111</div>
+    <nav-t c-tit="首页" />
+    <div @click="$nLoading.show()">111</div>
   </div>
 </template>
 

@@ -1,11 +1,12 @@
 <template>
   <div id="app">
-    <div class="view-page">
+    <div class="app-main">
       <transition :name="viewTransition">
         <keep-alive :include="$store.state.cache" :max="9">
-          <router-view :key="$route.fullPath" />
+          <router-view :key="$route.fullPath" class="app-ctx"/>
         </keep-alive>
       </transition>
+      <nav-b />
     </div>
   </div>
 </template>
