@@ -97,6 +97,7 @@ export default {
     .s-icon {
       height: 20px;
       img {
+        margin: auto;
         height: 100%;
       }
     }

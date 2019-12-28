@@ -13,6 +13,8 @@ new Vue({
 }).$mount('#app')
 
 // ===> 拓展
+import '@util/scale'
+
 // loading加载动画
 import load from "@com/loading/index.js"
 Vue.use(load)
