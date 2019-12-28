@@ -48,10 +48,12 @@ export default {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 999;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  z-index: 99;
   height: 50px;
   background-color: #fff;
-  width: 100%;
   box-sizing: border-box;
   &.border {
     &::before {

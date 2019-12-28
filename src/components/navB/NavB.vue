@@ -78,14 +78,18 @@ export default {
 .mod_navfooter {
   position: fixed;
   bottom: 0;
+  right: 0;
   left: 0;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
   z-index: 99;
   display: flex;
   background-color: #fff;
   text-align: center;
-  width: 100%;
   height: 50px;
   box-shadow: 0px -2px 10px 2px rgba(184, 184, 184, 0.1);
+  box-sizing: border-box;
   .nav-item {
     flex: 1;
     padding: 6px 0;

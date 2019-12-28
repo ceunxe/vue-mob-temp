@@ -16,11 +16,13 @@ html,body{
 #app {
   position: absolute;
   width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
   height: 100%;
   top: 0;
   left: 0;
+  right: 0;
   box-sizing: border-box;
-  margin: 0 auto;
   .app-main{
     height: 100%;
     .app-ctx{
